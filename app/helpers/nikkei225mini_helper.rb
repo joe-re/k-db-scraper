@@ -1,0 +1,2 @@
+module Nikkei225miniHelper
+end
