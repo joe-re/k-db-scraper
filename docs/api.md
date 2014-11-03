@@ -2,7 +2,7 @@
 
 ## 日経平均
 ```
-/api/v1/nikkei
+/api/nikkei.csv
 ```
 
 すべての日経平均データをcsvに合算して落とす。
