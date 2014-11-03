@@ -16,7 +16,7 @@ class NikkeiController < ApplicationController
     cli = Faraday.new(:url => API_END_POINT)
     rows = QUERIES.each_with_object([]) do |query, ary|
       ary << cli.get(query).body.split("\r\n")[3..-1] # 3行目からデータなので、そこから取得
-    end.flatten.uniq
+    end.flatten.uniq.sort
 
     rows_csv = CSV.generate do |csv|
       rows.each { |row| csv << row.split(',') }
